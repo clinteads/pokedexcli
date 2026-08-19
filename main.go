@@ -2,8 +2,7 @@ package main
 
 import (
 	"time"
-
-	"github.com/bootdotdev/pokedexcli/internal/pokeapi"
+	"github.com/clinteads/pokedexcli/internal/pokeapi"
 )
 
 func main() {
