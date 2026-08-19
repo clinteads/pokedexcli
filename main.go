@@ -12,35 +12,9 @@ type cliCommand struct {
 	callback func() error
 }
 
-func commandExit() error{
-	fmt.Printf("Closing the Pokedex... Goodbye!\n")
-	os.Exit(0)
-	fmt.Errorf("Error not reached")
-	return nil
-}
 
-func commandHelp() error{
-	fmt.Println("Welcome to the Pokedex!")
-	fmt.Println("Usage:")
-	fmt.Println()
-	fmt.Println("help: Displays a help message")
-	fmt.Println("exit: Exit the Pokedex")
 
-	return nil
-}
 
-var commands = map[string]cliCommand{
-	"exit": {
-		name: "exit",
-		description: "Exit the Pokedex",
-		callback: commandExit,
-	},
-	"help": {
-		name: "help",
-		description: "Displays a help message",
-		callback: commandHelp,
-	},
-}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
